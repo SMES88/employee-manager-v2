@@ -33,6 +33,7 @@ module.exports = {
         berniceOrtiz: 'li[name="employee1"]',
         marnieBarnett: 'li[name="employee2"]',
         phillipWeaver: 'li[name="employee3"]',
+        //Name above will be changed to Phillip Beaver
         teresaOsborne: 'li[name="employee4"]',
         dollieBerry: 'li[name="employee5"]',
         harrietWilliamson: 'li[name="employee6"]',
