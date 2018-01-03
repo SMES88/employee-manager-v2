@@ -40,5 +40,4 @@ module.exports = {
         browser.expect.element(selectors.cardInfo.emailField).to.have.value.that.equals(data.validData.email)
         browser.expect.element(selectors.cardInfo.titleField).to.have.value.that.equals(data.validData.title)
     }
-
 }
