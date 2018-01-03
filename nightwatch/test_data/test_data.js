@@ -13,9 +13,15 @@ module.exports = {
     },
     dummyData: {
         name: 'Anakin Skywalker',
-        phone: '9876543210',
+        phone: '(987)654-3210',
         email: 'futuresith@podracers.com',
         title: 'The Chosen One'
+    },
+    rubyEstrada: {
+        name: 'Ruby Estrada',
+        phone: '5740923478',
+        email: 'r_estrada@gmail.com',
+        title: 'Back-End Developer'
     },
     newData: {
         name: 'Harry Potter',

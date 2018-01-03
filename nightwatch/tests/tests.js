@@ -10,6 +10,7 @@ module.exports = {
         browser.end();
     },
     'Testing the functionality of the save button EM1-21': browser => {
+        //One test with the valid data changing an employee's data
         browser.click(selectors.employees.phillipWeaver)
         functions.enterEmployee(selectors.cardInfo, data.validData, browser);
         browser
@@ -18,6 +19,17 @@ module.exports = {
             .click(selectors.employees.berniceOrtiz)
             .click(selectors.employees.phillipWeaver)
             .expect.element(selectors.cardInfo.nameField).to.have.value.that.equals(data.validData.name)
+        //testing with a phone number formatted in standard US form
+        browser.click(selectors.employees.rubyEstrada)
+        functions.enterEmployee(selectors.cardInfo, data.dummyData, browser)
+        browser.click(selectors.buttons.saveButton)
+            .click(selectors.employees.berniceOrtiz)
+            .click(selectors.employees.rubyEstrada)
+            .expect.element(selectors.cardInfo.nameField).to.have.value.that.equals(data.dummyData.name)
+        //revert ruby back to the default
+        browser.click(selectors.employees.rubyEstrada)
+        functions.enterEmployee(selectors.cardInfo, data.rubyEstrada, browser)
+        browser.click(selectors.buttons.saveButton)
     },
     'Invalid info can not be saved (Jira issue: EM1-23)': browser => {
         browser
