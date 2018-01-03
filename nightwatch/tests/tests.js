@@ -127,5 +127,35 @@ module.exports = {
         browser.expect.element(selectors.employees.eveSparks).to.not.be.present
         // verify that Eve Sparks is not included in the employee list
 
+    },
+    'Saves to employees should be reflected in the search results while the search field is populated': browser => {
+        browser
+            .click(selectors.employees.berniceOrtiz)
+            .pause(100)
+        functions.enterValue(selectors.other.searchBox, data.dummyData.name, browser)
+        // this will search the name anakin skywalker
+        browser
+            .pause(100)
+        browser.expect.element(selectors.employees.phillipWeaver).to.not.be.present;
+        browser.expect.element(selectors.buttons.addEmployee).to.be.present;
+        browser.expect.element(selectors.employees.berniceOrtiz).to.not.to.be.present;
+        browser.expect.element(selectors.employees.marnieBarnett).to.not.to.be.present;
+        browser.expect.element(selectors.employees.teresaOsborne).to.not.to.be.present;
+        browser.expect.element(selectors.employees.dollieBerry).to.not.to.be.present;
+        browser.expect.element(selectors.employees.harrietWilliamson).to.not.to.be.present;
+        browser.expect.element(selectors.employees.rubyEstrada).to.not.to.be.present;
+        browser.expect.element(selectors.employees.louWhite).to.not.to.be.present;
+        browser.expect.element(selectors.employees.eveSparks).to.not.to.be.present;
+        browser.expect.element(selectors.employees.loisBrewer).to.not.to.be.present;
+        browser.expect.element(selectors.employees.newEmployee).to.not.to.be.present;
+        //expects no names to be present after the search
+        browser
+        functions.enterValue(selectors.cardInfo.nameField, data.dummyData.name, browser)
+        // this wll change the employee name bernice ortiz to anakin skywalker
+        browser
+            .click(selectors.buttons.saveButton)
+            .pause(100)
+        browser.expect.element(selectors.employees.berniceOrtiz).to.be.present;
+
     }
 }
