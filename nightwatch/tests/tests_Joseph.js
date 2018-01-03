@@ -11,11 +11,11 @@ module.exports = {
     },
     'Testing the functionality of the save button EM1-21': browser => {
         browser.click(selectors.employees.phillipWeaver)
-        functions.enterValue(selectors.cardInfo.nameField, data.validData.name, browser);
-        functions.enterValue(selectors.cardInfo.phoneField, data.validData.phone, browser);
-        functions.enterValue(selectors.cardInfo.emailField, data.validData.email, browser);
-        functions.enterValue(selectors.cardInfo.titleField, data.validData.title, browser);
+        functions.enterEmployee(selectors.cardInfo, data.validData, browser);
         browser.click(selectors.buttons.saveButton)
+            .click(selectors.employees.berniceOrtiz)
+            .click(selectors.employees.phillipWeaver)
+            .expect.element(selectors.cardInfo.nameField).to.have.value.that.equals(data.validData.name)
     },
     'Testing the cancel button EM1-17': browser => {
         browser

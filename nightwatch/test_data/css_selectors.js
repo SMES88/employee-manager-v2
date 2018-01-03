@@ -40,7 +40,7 @@ module.exports = {
         louWhite: 'li[name="employee8"]',
         eveSparks: 'li[name="employee9"]',
         loisBrewer: 'li[name="employee10"]',
-        addEmployee: 'li[name="employee11"]',
+        newEmployee: 'li[name="employee11"]',
     }
 
 }
