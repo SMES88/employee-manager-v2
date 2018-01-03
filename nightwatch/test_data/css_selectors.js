@@ -23,6 +23,8 @@ module.exports = {
         nameField: 'input[name="nameEntry"]',
         phoneLabel: 'span[name="phoneLabel"]',
         phoneField: 'input[name="phoneEntry"]',
+        emailLabel: 'span[name="emailField"]',
+        emailField: 'input[name="emailEntry"]',
         titleLabel: 'span[name="titleLabel"]',
         titleField: 'input[name="titleEntry"]',
     },
