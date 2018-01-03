@@ -7,7 +7,7 @@ module.exports = {
     },
     invalidData: {
         name: 'Phillip J Fry',
-        phone: '12345',
+        phone: '12345SD',
         email: 'this is no email',
         title: 'This is supposed to be longer than 30 characters, so I typed this '
     },
