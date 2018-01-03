@@ -1,7 +1,7 @@
 module.exports = {
     validData: {
         name: 'Phillip Beaver',
-        phone: '134567890',
+        phone: '1234567890',
         email: 'woodchuk@loglovers.net',
         title: 'Lead Log-Chewer'
     },
